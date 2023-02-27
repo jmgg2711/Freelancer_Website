@@ -67,3 +67,6 @@ h1.titulo span {
     color: var(--oscuro);
 }
 
+.hero {
+    background-image: url(../img/hero.jpg);
+}
