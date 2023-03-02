@@ -38,6 +38,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
+
 h1.titulo span {
     font-size: 2rem;
     color:blue;
@@ -70,6 +71,11 @@ h1.titulo span {
     border-radius: 0.5rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .sombra {
@@ -87,6 +93,26 @@ h1.titulo span {
     }
 }
 
+/** Utilidades **/
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+/* Navegación principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -144,3 +170,82 @@ h1.titulo span {
     display: flex;
     align-items: flex-end;
 }
+
+/** Servicios **/
+.servicios {
+    display: grid;
+    /*grid-template-columns: 300px 300px;
+    grid-template-rows: 250px 800px;
+    grid: 250px 800px / 300px 300px;
+    grid-template-columns: 33.3% 33.3% 33.3%; 
+    grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/** Contacto **/
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /** Utilizar el valor más pequeño **/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
